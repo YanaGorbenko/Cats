@@ -1,44 +1,199 @@
-body {
-  background-color: rgb(255, 250, 250);
-  font-family: Arial, sans-serif;
-  color: rgb(48, 44, 26);
-  padding: 10px 20px;
-}
-header {
-  background-image: url('../images/background.png');
-  font-family: Arial, sans-serif;
-  background-position: top;
-  background-size: contain;
-  border: 2px solid white;
-  border-radius: 30px;
-  padding: 10px 20px;
+/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.headd {
-  list-style-type: none;
-  text-transform: uppercase;
-  color: black;
-  font-weight: 700;
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
-nav a:visited {
-  color: #8b4513; /* коричневий для відвіданих посилань */
+
+/* Хедер */
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 0;
+  margin-bottom: 30px;
 }
-h1 {
+
+header h1 {
   text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.personalinformation {
-  width: 600px;
-  height: 140px;
+
+.headd li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
 }
-.message {
-  width: 600px;
-  height: 200px;
+
+.headd li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
-button {
-  text-transform: uppercase;
-  font-size: larger;
+
+/* Основний контент */
+main {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+/* Вступний текст */
+main > p {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #667eea;
+  color: #555;
+}
+
+/* Форма */
+form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+}
+
+/* Fieldset */
+fieldset {
+  border: 2px solid #e6eeff;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  position: relative;
+}
+
+fieldset:hover {
+  border-color: #667eea;
+}
+
+fieldset::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #ff9a9e);
+  border-radius: 15px 15px 0 0;
+}
+
+fieldset:hover::before {
+  opacity: 1;
+}
+
+/* Легенда */
+legend {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #667eea;
+  padding: 0 1rem;
+  background: white;
+  border-radius: 25px;
+  border: 2px solid #667eea;
+}
+
+.personalinformation legend::before {
+  content: '👤 ';
+}
+
+.message legend::before {
+  content: '💌 ';
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+label:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+/* Input fields */
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  font-family: 'Arial', sans-serif;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+select:focus,
+textarea:focus {
+  border-color: #667eea;
+}
+
+/* Select styling */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23667eea' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 3rem;
+}
+
+/* Textarea */
+textarea {
+  min-height: 120px;
+  font-size: 1rem;
+}
+
+textarea::placeholder {
+  color: #999;
   font-style: italic;
-  width: 150px;
-  height: 45px;
-  background-color: rgb(207, 208, 189);
+}
+
+/* Кнопка */
+button {
+  display: block;
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+button:active {
+}
+
+button::before {
+  content: '🐱';
+  margin-right: 0.8rem;
+  font-size: 1.3rem;
 }

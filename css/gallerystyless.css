@@ -1,28 +1,106 @@
-body {
-  background-color: rgb(255, 250, 250);
-  font-family: Arial, sans-serif;
-  color: rgb(48, 44, 26);
-  padding: 10px 20px;
-}
-header {
-  background-image: url('../images/background.png');
-  font-family: Arial, sans-serif;
-  background-position: top;
-  background-size: contain;
-  border: 2px solid white;
-  border-radius: 30px;
-  padding: 10px 20px;
+/* gallerystyles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.headd {
-  list-style-type: none;
-  text-transform: uppercase;
-  color: black;
-  font-weight: 700;
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
-nav a:visited {
-  color: #8b4513; /* коричневий для відвіданих посилань */
+
+/* Хедер */
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 0;
 }
-h1 {
+
+header h1 {
   text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.headd li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.headd li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Основна галерея */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+/* Картки з фото */
+main a {
+  display: block;
+  text-decoration: none;
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+main a:hover {
+  border-color: #667eea;
+}
+
+main a:hover::before {
+  content: '🔍 Натисни для перегляду';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(102, 126, 234, 0.9);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Зображення */
+main a img {
+  display: block;
+}
+
+/* main a:hover img {
+  filter: brightness(0.7) blur(2px);
+  transform: scale(1.1);
+} */
+
+/* Підписи до фото */
+.caption {
+  padding: 1.2rem;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  border-top: 2px solid #e6eeff;
+  position: relative;
+}
+
+main a:hover .caption {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.caption::before {
+  content: '🐱';
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
 }
