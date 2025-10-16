@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/contactsstyles.css" />
+    <title>Cats</title>
+  </head>
+  <body>
+    <header>
+      <h1>Напиши мені</h1>
+      <nav>
+        <ul class="headd">
+          <li><a href="/index.html">Головна </a></li>
+          <li><a href="./about.html">Про мене </a></li>
+          <li><a href="./articles.html">Факти </a></li>
+          <li><a href="./gallery.html">Фото </a></li>
+          <li><a href="./help.html">Поради </a></li>
+          <li><a href="./contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <p>
+        Я завжди рада поспілкуватися з такими ж любителями котів, як я! Напиши
+        мені, якщо хочеш щось запропонувати або задати питання про котів.
+      </p>
+
+      <form>
+        <fieldset class="personalinformation">
+          <legend>Особиста інформація</legend>
+          <label for="name">Введи своє ім'я:</label><br />
+          <input type="text" id="name" name="name" /><br />
+
+          <label for="email">Введи свою електронну пошту</label><br />
+          <input type="email" id="email" name="email" /><br />
+        </fieldset>
+
+        <fieldset class="message">
+          <legend>Повідомлення</legend>
+          <label for="theme">Обери тему повідомлення зі списку</label><br />
+          <select id="theme" name="theme">
+            <option value="fact">Цікавий факт про котика</option>
+            <option value="feeding">Харчування котиків</option>
+            <option value="games">Ігри з котиком</option>
+            <option value="care">Догляд за котиком</option>
+            <option value="another">Інше</option>
+          </select>
+          <br />
+
+          <label for="message">Введи своє питання</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"
+            placeholder="Введіть ваше повідомлення тут"
+          ></textarea
+          ><br />
+        </fieldset>
+
+        <button type="button" onclick="alert('Відправлено!')">
+          Відправити
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

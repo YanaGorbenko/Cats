@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(255, 250, 250);
+  font-family: Arial, sans-serif;
+  color: rgb(48, 44, 26);
+  padding: 10px 20px;
+}
+header {
+  background-image: url('../images/background.png');
+  font-family: Arial, sans-serif;
+  background-position: top;
+  background-size: contain;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.headd {
+  list-style-type: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+}
+nav a:visited {
+  color: #8b4513; /* коричневий для відвіданих посилань */
+}
+h1 {
+  text-align: center;
+}
+.instructions li:nth-child(1) {
+  list-style-type: '🍗 ';
+}
+.instructions li:nth-child(2) {
+  list-style-type: '✨ ';
+}
+.instructions li:nth-child(3) {
+  list-style-type: '🎮 ';
+}
+.instr {
+  border-width: 2px;
+  border-style: dotted;
+  border-radius: 8px;
+  width: 600px;
+  height: 200px;
+  font-size: 20px;
+}
+.instr h2 {
+  text-align: center;
+}

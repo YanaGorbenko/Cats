@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(255, 250, 250);
+  font-family: Arial, sans-serif;
+  color: rgb(48, 44, 26);
+  padding: 10px 20px;
+}
+header {
+  background-image: url('../images/background.png');
+  font-family: Arial, sans-serif;
+  background-position: top;
+  background-size: contain;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+main {
+  padding-left: 50px;
+}
+.headd {
+  list-style-type: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+}
+nav a:visited {
+  color: #8b4513; /* коричневий для відвіданих посилань */
+}
+h1 {
+  text-align: center;
+}
+video {
+  text-align: center;
+}
+.luvcats {
+  border-width: 3px;
+  border-style: dotted;
+  border-radius: 8px;
+  width: 600px;
+  height: 170px;
+  margin-top: 20px;
+  background-color: floralwhite;
+}
+.luvcats ul {
+  list-style-type: '🐾';
+  list-style-position: inside;
+}
+.luvcats h2 {
+  text-align: center;
+}
+.bot {
+  text-align: center;
+}
+.history {
+  margin-bottom: 20px;
+}
